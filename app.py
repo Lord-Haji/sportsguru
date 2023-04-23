@@ -88,7 +88,7 @@ footer = """
 ---
 <div style='text-align: center; font-size: 14px; color: #888;'>
   <p>Powered by SportsGuru &mdash; IPL Win Predictor</p>
-  <p>&copy; {} &mdash; Developed by <a href="https://github.com/lord-haji">lord-haji</a> and <a href="https://github.com/cssohan">cssohan</a></p>
+  <p>&copy; {} &mdash; Developed by <a href="https://github.com/lord-haji">lord-haji</a> and <a href="https://github.com/cs-sohan">cs-sohan</a></p>
 </div>
 """.format(current_year)
 
