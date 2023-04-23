@@ -24,21 +24,32 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
 pipe = pickle.load(open('pipe.pkl','rb'))
 st.title('IPL Win Predictor')
 
-# col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
 
-with st.sidebar:
+# Sidebar implementation
+# with st.sidebar:
+#     batting_team = st.selectbox('Select the batting team', sorted(teams))
+#     bowling_team = st.selectbox('Select the bowling team', sorted([team for team in teams if team != batting_team]))
+#     selected_city = st.selectbox('Select host city', sorted(cities))
+#     target = st.number_input('Target', step=1)
+
+with col1:
     batting_team = st.selectbox('Select the batting team', sorted(teams))
+
+with col2:
     bowling_team = st.selectbox('Select the bowling team', sorted([team for team in teams if team != batting_team]))
-    selected_city = st.selectbox('Select host city', sorted(cities))
-    target = st.number_input('Target', step=1)
+    
 
 
 if batting_team == bowling_team:
     st.error("Please select different teams for batting and bowling")
 else:
 
+    selected_city = st.selectbox('Select host city', sorted(cities))
+    target = st.number_input('Target', step=1)
+    
     col3,col4,col5 = st.columns(3)
-
+    
     with col3:
         score = st.number_input('Score', step=1, max_value=target-1 if target > 0 else None)
     with col4:
