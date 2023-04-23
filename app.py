@@ -1,6 +1,14 @@
 import streamlit as st
 import pickle
 import pandas as pd
+from datetime import date
+
+st.set_page_config(
+    page_title="SportsGuru - IPL",
+    page_icon="🏏"
+    # layout="wide",
+    # initial_sidebar_state="expanded",
+)
 
 teams = ['Sunrisers Hyderabad',
  'Mumbai Indians',
@@ -71,3 +79,17 @@ else:
         win = result[0][1]
         st.header(batting_team + "- " + str(round(win*100, 2)) + "%")
         st.header(bowling_team + "- " + str(round(loss*100, 2)) + "%")
+        
+        
+# Footer implementation
+current_year = date.today().year
+
+footer = """
+---
+<div style='text-align: center; font-size: 14px; color: #888;'>
+  <p>Powered by SportsGuru &mdash; IPL Win Predictor</p>
+  <p>&copy; {} &mdash; Developed by <a href="https://github.com/lord-haji">lord-haji</a> and <a href="https://github.com/cssohan">cssohan</a></p>
+</div>
+""".format(current_year)
+
+st.markdown(footer, unsafe_allow_html=True)
