@@ -70,7 +70,6 @@ else:
         balls_left = 120 - (overs*6)
         crr = score/overs
         rrr = (runs_left*6)/balls_left
-        predicted_score = score + int(crr*balls_left/6)
         
         wickets = 10 - wickets
 
@@ -89,7 +88,6 @@ else:
         st.header("Score Predictions:")
         st.write("CRR (Current Run Rate): {:.2f}".format(crr))
         st.write("RRR (Required Run Rate): {:.2f}".format(rrr))
-        st.write("Predicted Score: {}".format(predicted_score), "/", str(10 - wickets))
         
 
         
