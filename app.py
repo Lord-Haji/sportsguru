@@ -14,7 +14,7 @@ teams = ['Sunrisers Hyderabad',
  'Mumbai Indians',
  'Royal Challengers Bangalore',
  'Kolkata Knight Riders',
- 'Punjab Kings',
+ 'Kings XI Punjab',
  'Chennai Super Kings',
  'Rajasthan Royals',
  'Delhi Capitals'
